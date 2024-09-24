@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKV.Design.Co</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts for Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    /* Hero Section */
+    .hero-section {
+      height: 100vh;
+      background-image: url('https://i.pinimg.com/564x/77/b4/40/77b4405b614c4e3d978f9fd2f763abd1.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-section h1 {
+      font-size: 4rem;
+      font-weight: 600;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .hero-section p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .hero-section .btn {
+      padding: 10px 30px;
+      font-size: 1.2rem;
+      background-color: #ff4a57;
+      border: none;
+      color: #fff;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Parallax Section */
+    .parallax-section {
+      height: 60vh;
+      background-image: url('https://i.pinimg.com/736x/c0/a7/13/c0a7138960563b441fe38d70a8627d65.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .team-section {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    .team-image {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+    .social-icons a {
+      margin-right: 15px;
+      color: #333;
+      font-size: 24px;
+    }
+    /* Services Section */
+    .services {
+      padding: 80px 0;
+      background-color: #f0f0f0;
+    }
+
+    .services h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .service-box {
+      background-color: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 15px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-box img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    .service-box h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .services {
+      padding: 80px 0;
+      background-color: #f0f0f0;
+    }
+
+    .services h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .service-box {
+      background-color: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 15px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-box img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    .service-box h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    
+
+    /* Recent Projects */
+    .projects-section {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+
+    .projects-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .project-card {
+      margin-bottom: 30px;
+      border: none;
+      transition: all 0.3s ease-in-out;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .project-card img {
+      transition: all 0.3s ease-in-out;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    .project-card .card-body {
+      padding: 20px;
+    }
+
+   
+      .testimonial {
+        background-color: #f8f9fa;
+        padding: 30px;
+        margin: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      }
+  
+      .testimonial .client-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+      }
+  
+      .testimonial .client-name {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+  
+      .testimonial .client-review {
+        font-size: 1em;
+        font-style: italic;
+        color: #6c757d;
+      }
+    
+    /* Contact Section */
+    .contact-section {
+      background-color: #ff4a57;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .contact-section p {
+      margin-bottom: 30px;
+    }
+
+    .contact-section .btn {
+      background-color: white;
+      color: #ff4a57;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      border: none;
+    }
+  </style>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .contact-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-control:focus {
+      border-color: #6c757d;
+      box-shadow: none;
+    }
+    .btn-primary {
+      background-color: #333;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Designs That Speak Creativity</h1>
+      <p>Transforming ideas into impactful visuals</p>
+      <a href="#services" class="btn">Discover My Work</a>
+    </div>
+  </section>
+
+<!-- Team Section -->
+<section class="py-5">
+  <div class="container">
+    <!-- Founder -->
+    <div class="row justify-content-center text-center team-section">
+      <div class="col-md-6">
+        <img src="images/das001.jfif" alt="Satya Vadali" class="team-image mb-3">
+        <h2 class="mb-3">Satya Vadali</h2>
+        <h4 class="text-muted">Founder & Creative Director</h4>
+        <p class="mt-3">As the founder of SKV Design.Co, I am passionate about transforming ideas into captivating designs, helping brands communicate their stories visually and effectively.</p>
+        <div class="social-icons mt-4">
+          <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Co-Directors -->
+    <div class="row justify-content-center text-center team-section">
+      <div class="col-md-6">
+        <img src="images/Vijay Sai Koushik.jfif" alt="Co-Director Name" class="team-image mb-3">
+        <h2 class="mb-3">Vijay Sai Koushik</h2>
+        <h4 class="text-muted">Co-Director & Design Strategist</h4>
+        <p class="mt-3">Description about the co-director, highlighting their expertise and contributions to the agency.</p>
+        <div class="social-icons mt-4">
+          <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="images/Vinay Palla.jfif" alt="Co-Director Name" class="team-image mb-3">
+        <h2 class="mb-3">Vinay Palla</h2>
+        <h4 class="text-muted">Co-Director & Marketing Expert</h4>
+        <p class="mt-3">Description about the co-director, highlighting their expertise and contributions to the agency.</p>
+        <div class="social-icons mt-4">
+          <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Services Section -->
+  <div class="services">
+    <div class="container">
+      <h2>My Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-box">
+            <img src="images/Recents Project/Truly TRIBAL CUISINE.jpg" alt="Logo Design">
+            <h4>Logo Design</h4>
+            <p>Creating iconic and memorable logos for brands.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <img src="images/Recents Project/draganball tshirt01 copy.png" alt="T-Shirt Designing">
+            <h4>T-Shirt Designing</h4>
+            <p>T-Shirt Designing: Expert logos, branding, print, and digital design services.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <img src="images/Recents Project/branding.jpg" alt="Branding">
+            <h4>Branding</h4>
+            <p>Developing brand identities that leave a lasting impact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-box">
+            <img src="images/Recents Project/socil media markerting.jpg" alt="Social media Markinting">
+            <h4>Social media Markinting </h4>
+            <p>Social Media Marketing: Content, design, ads, & growth strategies.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <img src="images/Recents Project/web designing.jpg" alt="Web Design">
+            <h4>Web Design</h4>
+            <p>Building modern and responsive websites that impress.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <img src="images/Recents Project/ui ux.jpg" alt="UI/UX Designing">
+            <h4>UI/UX Designing</h4>
+            <p>Developing brand  creates user-friendly, engaging UI/UX designs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Parallax Section -->
+  <section class="parallax-section">
+    
+    
+  </section>
+
+  <!-- Recent Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2>Recent Projects</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="images/Recents Project/gatos cafe.jpg" alt="Project 1">
+            <div class="card-body">
+              <h5>GATOS Cafe</h5>
+              <p> Recently, I completed a branding project for a café, where I created a fresh and inviting design that reflects the café's cozy atmosphere and promotional posters.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="images/Recents Project/car copy.png" alt="Project 2">
+            <div class="card-body">
+              <h5>BKC CAR RENTAL</h5>
+              <p>Recently, I designed a poster for a car rental service, focusing on bold visuals and modern typography to capture attention and highlight their key offerings.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="images/Recents Project/soh.jfif" alt="Project 3">
+            <div class="card-body">
+              <h5>Souls of Humanity</h5>
+              <p> Recently, I worked on a branding project for an NGO, designing visuals that reflected their mission and values. Through clean design, thoughtful typography, and meaningful imagery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <div class="container mt-5">
+    <h2 class="text-center">Client Reviews</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="testimonial text-center">
+          <img src="images/testimonials/0001 copy.jpg" alt="Client Image" class="client-img">
+          <div class="client-name">Krishna.ch</div>
+          <div class="client-review">
+            "Working with this graphic designer has been a game changer for our branding! The creativity and professionalism were top-notch."
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial text-center">
+          <img src="images/testimonials/ajay copy.jpg" alt="Client Image" class="client-img">
+          <div class="client-name">AJAY KUMAR</div>
+          <div class="client-review">
+            "Amazing designs and fast delivery! Would definitely recommend for any design project."
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial text-center">
+          <img src="images/testimonials/arun.rahul.jfif" alt="Client Image" class="client-img">
+          <div class="client-name">ARUN RAHUL</div>
+          <div class="client-review">
+            "Exceptional work! The designs were spot on and reflected exactly what we wanted."
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="text-center mb-4">Get in Touch</h2>
+        <p class="text-center mb-5">We’d love to hear from you! Reach out with any questions, project inquiries, or just to say hello.</p>
+        <div class="contact-form">
+          <form action="#" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Your message..."></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
